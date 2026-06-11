@@ -120,7 +120,7 @@ function DomainCard({
   note?: string;
 }) {
   return (
-    <div className="card p-6 text-center">
+    <div className="card reveal-pop p-6 text-center">
       <p className="label mb-2">{label}</p>
       <h3
         className="mb-4 font-bold"
@@ -166,7 +166,7 @@ export default function HomePage() {
           className="relative overflow-hidden py-24 sm:py-28"
           style={{ background: "var(--color-dark-roast)" }}
         >
-          <div className="absolute left-1/2 top-0 h-80 w-80 -translate-x-1/2 rounded-full bg-[rgba(217,154,78,0.18)] blur-3xl" />
+          <div className="absolute left-1/2 top-0 h-80 w-80 -translate-x-1/2 rounded-full bg-[rgba(217,154,78,0.16)] blur-3xl" />
 
           <div className="center-wrap relative z-10 text-center">
             <div className="fade-up mb-6 inline-flex items-center gap-2 rounded-full border border-[rgba(217,154,78,0.24)] bg-[rgba(217,154,78,0.1)] px-4 py-2">
@@ -227,45 +227,17 @@ export default function HomePage() {
                 Public transparency report
               </Link>
             </div>
-
-            <div
-              className="fade-in delay-3 mx-auto mt-12 grid max-w-4xl gap-3 border-t pt-8 sm:grid-cols-5"
-              style={{ borderColor: "rgba(244,234,220,0.12)" }}
-            >
-              {[
-                "W3C VC",
-                "did:key",
-                "Ed25519",
-                "90-day escrow",
-                "GDPR deletion",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-full border px-3 py-2 text-xs font-semibold"
-                  style={{
-                    color: "var(--color-parchment)",
-                    borderColor: "rgba(244,234,220,0.12)",
-                    background: "rgba(255,248,236,0.045)",
-                  }}
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
         <SectionDivider />
 
-        <section
-          className="py-20"
-          style={{ background: "var(--color-mahogany)" }}
-        >
+        <section className="py-20" style={{ background: "var(--color-mahogany)" }}>
           <div className="center-wrap text-center">
-            <p className="label mb-3">Three domains, zero ambiguity</p>
+            <p className="label reveal mb-3">Three domains, zero ambiguity</p>
 
             <h2
-              className="mx-auto mb-11 max-w-2xl font-bold"
+              className="reveal mx-auto mb-11 max-w-2xl font-bold"
               style={{
                 fontFamily: "var(--font-display)",
                 fontSize: "clamp(32px, 4vw, 52px)",
@@ -327,7 +299,7 @@ export default function HomePage() {
         >
           <div className="center-wrap">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
-              <div className="text-center lg:sticky lg:top-28">
+              <div className="reveal-left text-center lg:sticky lg:top-28">
                 <div className="mb-5 flex flex-wrap justify-center gap-2">
                   <FeatureTag text="Feature 01" />
                   <FeatureTag text="Explainability" />
@@ -364,7 +336,7 @@ export default function HomePage() {
                   ].map((item) => (
                     <div
                       key={item}
-                      className="rounded-full border px-4 py-2 text-sm font-semibold"
+                      className="rounded-full border px-4 py-2 text-sm font-semibold transition hover:-translate-y-1"
                       style={{
                         color: "var(--color-ceramic)",
                         borderColor: "rgba(244,234,220,0.12)",
@@ -377,7 +349,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="space-y-4">
+              <div className="reveal-right space-y-4">
                 <div className="flex flex-col items-center justify-between gap-3 text-center sm:flex-row">
                   <p className="label">
                     Live preview - {DEMO_SESSION.examTitle}
@@ -410,13 +382,10 @@ export default function HomePage() {
 
         <SectionDivider />
 
-        <section
-          className="py-20"
-          style={{ background: "var(--color-mahogany)" }}
-        >
+        <section className="py-20" style={{ background: "var(--color-mahogany)" }}>
           <div className="center-wrap">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-              <div className="text-center">
+              <div className="reveal-left text-center">
                 <div className="mb-5 flex flex-wrap justify-center gap-2">
                   <FeatureTag text="Feature 02" />
                   <FeatureTag text="Portability" />
@@ -453,7 +422,7 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              <div className="card p-7 text-center">
+              <div className="ledger-card reveal-pop p-7 text-center">
                 <p className="label mb-2">Verifiable Credential</p>
 
                 <h3
@@ -481,7 +450,7 @@ export default function HomePage() {
                   ].map(([label, value]) => (
                     <div
                       key={label}
-                      className="rounded-[18px] border p-4"
+                      className="rounded-[18px] border p-4 transition hover:-translate-y-1"
                       style={{
                         borderColor: "rgba(244,234,220,0.12)",
                         background: "rgba(255,248,236,0.045)",
@@ -515,10 +484,7 @@ export default function HomePage() {
 
         <SectionDivider />
 
-        <section
-          className="py-20"
-          style={{ background: "var(--color-dark-roast)" }}
-        >
+        <section className="py-20" style={{ background: "var(--color-dark-roast)" }}>
           <div className="center-wrap">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div className="grid gap-4 sm:grid-cols-2">
@@ -528,7 +494,7 @@ export default function HomePage() {
                   ["Overturn rate", "19.6%", "var(--color-slate-blue)"],
                   ["Deletion compliance", "99.6%", "var(--color-ceramic)"],
                 ].map(([label, value, color]) => (
-                  <div key={label} className="card p-6 text-center">
+                  <div key={label} className="card reveal-pop p-6 text-center">
                     <p className="label mb-2">{label}</p>
                     <p
                       className="font-bold"
@@ -545,7 +511,7 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="text-center">
+              <div className="reveal-right text-center">
                 <div className="mb-5 flex flex-wrap justify-center gap-2">
                   <FeatureTag text="Feature 03" />
                   <FeatureTag text="Accountability" />
@@ -593,7 +559,7 @@ export default function HomePage() {
             borderTop: "1px solid rgba(244,234,220,0.12)",
           }}
         >
-          <div className="center-wrap">
+          <div className="center-wrap reveal">
             <h2
               className="mx-auto mb-5 max-w-2xl font-bold"
               style={{

@@ -10,16 +10,16 @@ const NAV_LINKS = [
 
 function SealMark() {
   return (
-    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
       <circle
-        cx="15"
-        cy="15"
-        r="14"
+        cx="17"
+        cy="17"
+        r="15.5"
         fill="var(--color-amber-surface)"
         stroke="var(--color-amber-dim)"
       />
       <path
-        d="M15 6.4 18.4 12l5.9 1.6-4.2 4.4.4 6-5.5-2.6L9.5 24l.4-6-4.2-4.4 5.9-1.6L15 6.4Z"
+        d="M17 7.2 20.9 14l6.4 1.7-4.7 4.8.5 6.6-6.1-2.9-6.1 2.9.5-6.6-4.7-4.8 6.4-1.7L17 7.2Z"
         fill="var(--color-amber)"
       />
     </svg>
@@ -34,7 +34,7 @@ export function Nav() {
       className="sticky top-0 z-50 w-full"
       style={{
         height: "var(--nav-height)",
-        background: "rgba(28, 16, 10, 0.88)",
+        background: "rgba(28, 16, 10, 0.9)",
         borderBottom: "1px solid rgba(244, 234, 220, 0.12)",
         backdropFilter: "blur(18px)",
       }}
@@ -45,7 +45,7 @@ export function Nav() {
       >
         <Link
           href="/"
-          className="group flex items-center gap-2.5"
+          className="group flex items-center gap-3"
           aria-label="ExamIdentity home"
         >
           <SealMark />
@@ -53,9 +53,9 @@ export function Nav() {
             className="font-bold tracking-tight"
             style={{
               fontFamily: "var(--font-display)",
-              fontSize: 18,
+              fontSize: 23,
               color: "var(--color-ivory)",
-              letterSpacing: "-0.035em",
+              letterSpacing: "-0.045em",
             }}
           >
             Exam<span style={{ color: "var(--color-amber-glow)" }}>Identity</span>
