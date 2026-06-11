@@ -1,0 +1,1 @@
+export { GoogleWalletPassButton } from './LinkedInShareButton'
