@@ -197,7 +197,7 @@ pnpm --filter web dev                      # → http://localhost:3000
 
 ## 📄 License
 
-See [LICENSE](LICENSE).
+See [MIT](LICENSE).
 
 ---
 
