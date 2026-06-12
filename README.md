@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡️ ExamIdentity
+# 🛡️ PROVORA
 
 ### *Verifiable exam integrity — without the black box.*
 
