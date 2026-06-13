@@ -1,0 +1,50 @@
+{
+  "name": "@examidentity/api",
+  "version": "0.0.1",
+  "private": true,
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "lint": "eslint src/",
+    "type-check": "tsc --noEmit",
+    "test": "node --import tsx --test test/unit.test.ts"
+  },
+  "dependencies": {
+    "@examidentity/shared-types": "workspace:*",
+    "@examidentity/crypto-utils": "workspace:*",
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/cors": "^11.2.0",
+    "@fastify/jwt": "^10.1.0",
+    "@fastify/rate-limit": "^10.3.0",
+    "@fastify/session": "^11.1.1",
+    "@fastify/swagger": "^9.7.0",
+    "@fastify/swagger-ui": "^5.2.6",
+    "@noble/ed25519": "^2.0.0",
+    "@supabase/supabase-js": "^2.108.0",
+    "@veramo/core": "^7.0.0",
+    "@veramo/credential-status": "^7.0.0",
+    "@veramo/credential-w3c": "^7.0.0",
+    "@veramo/data-store": "^7.0.0",
+    "@veramo/did-manager": "^7.0.0",
+    "@veramo/did-provider-key": "^7.0.0",
+    "@veramo/did-resolver": "^7.0.0",
+    "@veramo/key-manager": "^7.0.0",
+    "dotenv": "^17.4.2",
+    "fastify": "^5.8.5",
+    "ioredis": "^5.11.1",
+    "jsonwebtoken": "^9.0.3",
+    "passport-oauth2": "^1.8.0",
+    "pg": "^8.13.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^20",
+    "@types/pg": "^8.11.10",
+    "eslint": "^9",
+    "tsx": "^4.22.4",
+    "typescript": "^5.3.3"
+  }
+}
